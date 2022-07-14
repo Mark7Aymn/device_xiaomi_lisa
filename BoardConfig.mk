@@ -261,3 +261,4 @@ CONFIG_IEEE80211AX := true
 
 # Inherit proprietary blobs
 -include vendor/xiaomi/lisa/BoardConfigVendor.mk
+-include vendor/xiaomi/lisa-firmware/BoardConfigVendor.mk
