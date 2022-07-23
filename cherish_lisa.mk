@@ -27,3 +27,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.cherish.maintainer=Mark7Aymn
     
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+    # FOD animations
+    EXTRA_UDFPS_ANIMATIONS := true
