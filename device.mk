@@ -26,6 +26,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Call the MiuiCamera setup
 $(call inherit-product-if-exists, vendor/xiaomi/lisa-miuicamera/products/miuicamera.mk)
 
+#Lawnchair
+$(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
+
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30
 
