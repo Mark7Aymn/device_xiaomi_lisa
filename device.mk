@@ -8,6 +8,9 @@
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
+
 # Enable virtual A/B OTA
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
@@ -28,6 +31,7 @@ $(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
 
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30
+
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -155,11 +159,11 @@ PRODUCT_PACKAGES += \
     libcodec2_hidl@1.0.vendor
 
 # Device Settings
-PRODUCT_PACKAGES += \
-    XiaomiParts
+#PRODUCT_PACKAGES += \
+#    XiaomiParts
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/parts/privapp-permissions-parts.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-parts.xml
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/parts/privapp-permissions-parts.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-parts.xml
 
 # Display
 PRODUCT_PACKAGES += \

@@ -1,3 +1,6 @@
+# Bluetooth
+vendor.bluetooth.soc=hastings
+
 # Camera
 persist.vendor.camera.expose.aux=1
 
